@@ -363,6 +363,9 @@ body {
   margin: 0;
   padding: 0;
 }
+.footer-item {
+  list-style: none;
+}
 
 .footer-item:not(:last-child) {
   margin-right: 10px;
