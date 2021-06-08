@@ -74,7 +74,7 @@ body {
 }
 
 .item {
-  display: block;
+  display: flex;
   color: var(--primari-text-color);
   text-decoration: none;
   padding-top: 32px;
@@ -103,16 +103,15 @@ body {
 }
 
 .header-icon {
-  width: 16px;
-  height: 12px;
   margin-right: 10px;
 }
-.header-icon:hover,
-.header-icon:focus {
+
+.link-item:hover,
+.link-item:focus {
   fill: var(--accent-color);
 }
 
-.ink-item {
+.link-item {
   display: flex;
 }
 
@@ -272,7 +271,7 @@ body {
 }
 .command-list {
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 16px;
   display: flex;
   justify-content: center;
   padding: 0;
@@ -361,8 +360,6 @@ body {
 
 .footer-list {
   display: flex;
-  margin-top: 20px;
-  width: 206px;
   margin: 0;
   padding: 0;
 }
@@ -377,7 +374,6 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  margin-right: 10px;
   background-color: var(--footer-bg-icon);
 }
 
@@ -397,11 +393,20 @@ body {
 
 /* client section */
 .client-list {
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
 }
 
 .client-item {
+  list-style: none;
+}
+.client-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.client-icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -409,22 +414,13 @@ body {
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-}
-.client-item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.client-item:hover,
-.client-item:focus {
-  border-color: var(--accent-color);
-}
-
-.client-icon {
   fill: var(--icons-color);
 }
+
 .client-icon:hover,
 .client-icon:focus {
   fill: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 /* portfolio css */
